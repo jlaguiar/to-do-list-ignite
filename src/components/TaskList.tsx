@@ -21,7 +21,8 @@ export function TaskList() {
         title: newTaskTitle,
         isComplete: false
       };
-      setTasks([...tasks, newTask]);
+
+      setTasks(oldTasks => [...oldTasks, newTask]);
       setNewTaskTitle('')
     }
   }
